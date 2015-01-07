@@ -12,6 +12,8 @@ static NSString * const kHourHandAnimationKey = @"kHourHandAnimationKey";
 static NSString * const kMinuteHandAnimationKey = @"kMinuteHandAnimationKey";
 
 static CGFloat const kAnimationDuration = 1.4f;
+static CGFloat const kDefaultStrokeWidth = 4.0f;
+
 static CGFloat const kHourHandLengthMultiplier = 0.5f;
 static CGFloat const kMinuteHandLengthMultiplier = 0.8f;
 
@@ -39,7 +41,7 @@ static CGFloat const kMinuteHandLengthMultiplier = 0.8f;
 - (void)SFSClockViewCommonInit
 {
     _color = [UIColor blackColor];
-    _strokeWidth = 2.0f;
+    _strokeWidth = kDefaultStrokeWidth;
     
     [self refreshHands];
 }
@@ -59,7 +61,7 @@ static CGFloat const kMinuteHandLengthMultiplier = 0.8f;
     
     CGFloat dimentions = MIN(CGRectGetWidth(self.bounds)-self.strokeWidth, CGRectGetHeight(self.bounds)-self.strokeWidth);
     CGRect clockRect = CGRectMake((CGRectGetWidth(self.bounds)-dimentions)/2.0f, (CGRectGetHeight(self.bounds)-dimentions)/2.0f, dimentions, dimentions);
-    //CGRect dotRect = CGRectMake(CGRectGetMidX(clockRect)-self.strokeWidth, CGRectGetMidY(clockRect)-self.strokeWidth, self.strokeWidth*2.0f, self.strokeWidth*2.0f);
+//    CGRect dotRect = CGRectMake(CGRectGetMidX(clockRect)-self.strokeWidth, CGRectGetMidY(clockRect)-self.strokeWidth, self.strokeWidth*2.0f, self.strokeWidth*2.0f);
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, [self.color CGColor]);
@@ -67,7 +69,7 @@ static CGFloat const kMinuteHandLengthMultiplier = 0.8f;
     CGContextSetLineWidth(context, self.strokeWidth);
     
     CGContextStrokeEllipseInRect(context, clockRect);
-    //CGContextFillEllipseInRect(context, dotRect);
+//    CGContextFillEllipseInRect(context, dotRect);
 }
 
 #pragma mark - Public

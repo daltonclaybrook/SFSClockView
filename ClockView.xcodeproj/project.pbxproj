@@ -43,6 +43,7 @@
 		750737C81A5CF8490016BFD2 /* ClockViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClockViewTests.m; sourceTree = "<group>"; };
 		750737D21A5CFB1C0016BFD2 /* SFSClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSClockView.h; sourceTree = "<group>"; };
 		750737D31A5CFB1C0016BFD2 /* SFSClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSClockView.m; sourceTree = "<group>"; };
+		750737D71A5D21530016BFD2 /* SFSClockViewTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSClockViewTime.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +120,7 @@
 		750737D51A5D1FB80016BFD2 /* Clock View */ = {
 			isa = PBXGroup;
 			children = (
+				750737D71A5D21530016BFD2 /* SFSClockViewTime.h */,
 				750737D21A5CFB1C0016BFD2 /* SFSClockView.h */,
 				750737D31A5CFB1C0016BFD2 /* SFSClockView.m */,
 			);

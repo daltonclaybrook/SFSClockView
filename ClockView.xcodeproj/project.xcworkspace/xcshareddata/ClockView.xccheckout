@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E3CFBEA7-E1E5-43B9-B6EC-127FA1C0548F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ClockView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>25FF637FF28DFF73D0CF771AAD773BD71C997555</key>
+		<string>https://github.com/daltonclaybrook/SFSClockView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ClockView.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>25FF637FF28DFF73D0CF771AAD773BD71C997555</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/daltonclaybrook/SFSClockView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>25FF637FF28DFF73D0CF771AAD773BD71C997555</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>25FF637FF28DFF73D0CF771AAD773BD71C997555</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ClockView</string>
+		</dict>
+	</array>
+</dict>
+</plist>

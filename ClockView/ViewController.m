@@ -24,10 +24,8 @@
 
 - (IBAction)timeButtonPressed:(UIButton *)sender
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:self.datePicker.date];
+    SFSClockViewTime time = SFSClockViewTimeMakeWithDate(self.datePicker.date);
     
-    SFSClockViewTime time = SFSClockViewTimeMake(components.hour, components.minute);
     [self.clockView setTime:time animated:YES];
 }
 
