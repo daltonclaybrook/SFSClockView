@@ -16,6 +16,9 @@
 @property (nonatomic, strong) UIColor *color;
 @property (nonatomic, assign) CGFloat strokeWidth;
 
+@property (nonatomic, assign) NSTimeInterval minimumAnimationDuration;
+@property (nonatomic, assign) NSTimeInterval maximumAnimationDuration;
+
 - (void)setTime:(SFSClockViewTime)time animated:(BOOL)animated;
 
 @end

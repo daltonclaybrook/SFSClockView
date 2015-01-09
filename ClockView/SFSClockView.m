@@ -11,7 +11,9 @@
 static NSString * const kHourHandAnimationKey = @"kHourHandAnimationKey";
 static NSString * const kMinuteHandAnimationKey = @"kMinuteHandAnimationKey";
 
-static CGFloat const kAnimationDuration = 1.4f;
+static CGFloat const kMinAnimationDuration = 0.4f;
+static CGFloat const kMaxAnimationDuration = 2.0f;
+
 static CGFloat const kDefaultStrokeWidth = 4.0f;
 
 static CGFloat const kHourHandLengthMultiplier = 0.5f;
@@ -42,6 +44,9 @@ static CGFloat const kMinuteHandLengthMultiplier = 0.8f;
 {
     _color = [UIColor blackColor];
     _strokeWidth = kDefaultStrokeWidth;
+    
+    _minimumAnimationDuration = kMinAnimationDuration;
+    _maximumAnimationDuration = kMaxAnimationDuration;
     
     [self refreshHands];
 }
@@ -96,8 +101,12 @@ static CGFloat const kMinuteHandLengthMultiplier = 0.8f;
     CGFloat toHourRadians = [self hourRadiansFromHours:time.hours minutes:time.minutes];
     CGFloat toMinuteRadians = [self minuteRadiansFromHours:time.hours minutes:time.minutes];
     
+    CGFloat distance = fabsf(toHourRadians - fromHourRadians);
+    CGFloat animationModifier = distance / M_PI;
+    CGFloat duration = ((self.maximumAnimationDuration - self.minimumAnimationDuration) * animationModifier) + kMinAnimationDuration;
+    
     [CATransaction begin];
-    [CATransaction setAnimationDuration:kAnimationDuration];
+    [CATransaction setAnimationDuration:duration];
     [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
     
     CABasicAnimation *hourAnimation = [self createAnimationToRadians:toHourRadians fromRadians:fromHourRadians];
